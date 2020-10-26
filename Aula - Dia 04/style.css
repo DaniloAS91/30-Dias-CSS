@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: consolas;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #060c2d;
+}
+
+.container {
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container a {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 2em;
+  text-decoration: none;
+  color: #fff;
+  background: #3f51b5;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.container a:hover {
+  background: #e91e63;
+}
+
+.container a:before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.container a:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  z-index: -1;
+  transition: 0.5s ;
+}
+
+.container a:hover:after {
+  top: -8px;
+  left: -8px;
+  
+}
+
+/* bt Left */
+.container a:nth-child(1):before {
+  transform-origin: right;
+  transform: scaleX(0);
+}
+
+.container a:hover:nth-child(1):before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* bt Top */
+.container a:nth-child(2):before {
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.container a:hover:nth-child(2):before {
+  transform-origin: top;
+  transform: scaleY(1);
+}
+
+/* bt Right */
+.container a:nth-child(3):before {
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.container a:hover:nth-child(3):before {
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
+/* bt Bottom */
+.container a:nth-child(4):before {
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.container a:hover:nth-child(4):before {
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
