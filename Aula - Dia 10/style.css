@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: chartreuse;
+}
+
+span::before {
+    content: '';
+    animation: word-switch 5s infinite;
+}
+@keyframes word-switch {
+    0% {
+        content: '🕹️';
+    }
+    20% {
+        content: '🌭';
+    }
+    40% {
+        content: '🍻';
+    }
+    60% {
+        content: '⚽';
+    }
+    80% {
+        content: '🍙';
+    }
+    100% {
+        content: '🧑🏿‍💻';
+    }
+
+}
