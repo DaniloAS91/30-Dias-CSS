@@ -1,0 +1,75 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+a {
+    position: relative;
+    padding: 15px 40px;
+    border: 2px solid #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 32px;
+    color: #000;
+    overflow: hidden;
+}
+
+a:hover {
+    color: #fff;
+    transition-delay: 1s;
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 50%;
+    transform: translateY(-50%) scale(.6);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+    transition-property: left, transform;
+    transition-delay: 0s, 0s;
+    transition-duration: 1s, 0.5s;
+    opacity: 0;
+}
+a:hover:before {
+    left: 10px;
+    transform: translateY(-50%) scale(20);
+    transition-delay: 0s, 1s;
+    opacity: 1;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%) scale(.6);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+    transition-property: right, transform;
+    transition-delay: 0s, 0s;
+    transition-duration: 1s, 0.5s;
+    opacity: 0;
+}
+a:hover:after {
+    right: 10px;
+    transform: translateY(-50%) scale(20);
+    transition-delay: 0s, 1s;
+    opacity: 1;
+}
