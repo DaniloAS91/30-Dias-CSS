@@ -40,6 +40,7 @@ body {
     box-sizing: border-box;
     animation: animate 6s linear infinite;
 }
+
 .pulse span:nth-child(1){
     animation-delay: 0s;
 }
